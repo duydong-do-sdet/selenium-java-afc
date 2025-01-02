@@ -8,17 +8,15 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public class S_01_Check_Environment {
     WebDriver driver;
-    String projectPath = System.getProperty("user.dir");
 
     @BeforeClass
     public void beforeClass() {
-        System.setProperty("webdriver.gecko.driver", projectPath + "/browserDrivers/geckodriver.exe");
         driver = new FirefoxDriver();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
         driver.manage().window().maximize();
         driver.get("https://www.facebook.com/");
     }
