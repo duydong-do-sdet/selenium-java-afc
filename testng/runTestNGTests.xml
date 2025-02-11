@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG">
+
+    <!--<groups>
+        <run>
+            <include name="user"/>
+        </run>
+    </groups>-->
+    <!--<exclude name="user"/>-->
+
+    <test name="Run TestNG Tests" preserve-order="false">
+        <classes>
+            <class name="testcases.T_09_DependsOnMethods"/>
+            <class name="testcases.T_08_InvocationCount"/>
+            <class name="testcases.T_06_Data_Provider"/>
+            <class name="testcases.T_05_Skip_Test"/>
+            <class name="testcases.T_04_Priority"/>
+            <!--<class name="testcases.T_03_Groups"/>-->
+            <class name="testcases.T_02_Assertions"/>
+            <class name="testcases.T_01_Annotations"/>
+        </classes>
+    </test>
+
+</suite>
